@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billing - Chainstore</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/billing.css" />
+  <link rel="stylesheet" href="css/members.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+    
+    <aside class="sidebar">
+      <h2 class="logo">Chainstore</h2>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li class="active"><a href="billing.html">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    
+    <main class="main-content">
+      
+      
+      <header class="navbar">
+        <h1>Billing</h1>
+        <input type="text" placeholder="Search payments..." class="search-input" id="search-input" />
+      </header>
+
+   
+      <section class="billing-section">
+        <button class="add-member-btn" id="add-payment-btn">+ Add Payment</button>
+
+        <table class="billing-table">
+          <thead>
+            <tr>
+              <th>Member Name</th>
+              <th>Payment Type</th>
+              <th>Payment Mode</th>
+              <th>Amount</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="billing-table-body">
+            
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  
+  <div class="modal" id="payment-modal">
+    <div class="modal-content">
+      <h2 id="modal-title">Add Payment</h2>
+      <form id="payment-form">
+        <label for="memberName">Member Name</label>
+        <input type="text" id="memberName" name="memberName" required>
+
+        <label for="paymentType">Payment Type</label>
+        <input type="text" id="paymentType" name="paymentType" required>
+
+        <label for="paymentMode">Payment Mode</label>
+        <input type="text" id="paymentMode" name="paymentMode" required>
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" required>
+
+        <div class="modal-actions">
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  <script src="js/billing.js"></script>
+</body>
+</html>

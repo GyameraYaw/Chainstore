@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Members - Chainstore</title>
+  <link rel="stylesheet" href="css/members.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Chainstore</h2>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="members.html">Members</a></li>
+          <li><a href="billing.html">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+   
+    <main class="main-content">
+      
+  
+      <header class="navbar">
+        <h1>Members</h1>
+        <input type="text" placeholder="Search members..." class="search-input" id="searchInput" />
+      </header>
+
+      
+      <section class="content">
+        <button class="add-member-btn" id="addMemberBtn">+ Add Member</button>
+
+        <table class="member-table">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Date of Birth</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="memberTableBody">
+           
+          </tbody>
+        </table>
+      </section>
+
+
+      <div class="modal" id="memberModal">
+        <div class="modal-content">
+          <h2 id="modalTitle">Add Member</h2>
+          <form id="member-form">
+            <input type="hidden" id="editingIndex" value="" />
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="John Doe" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="johndoe@example.com" required />
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+
+            <div class="modal-actions">
+              <button type="submit" class="save-btn">Save</button>
+              <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/members.js"></script>
+</body>
+</html>

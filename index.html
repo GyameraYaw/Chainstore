@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Chainstore</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background-glow"></div>
+
+  <div class="container">
+    <div class="left-panel">
+      <div class="illustration">
+        <img src="images/purchase.svg" alt="Purchase illustration" />
+      </div>
+      <div class="welcome-text">
+        <h1>Join <span class="highlight">Chainstore</span> Today<br> Create Your Account</h1>
+        <p>Enjoy a seamless shopping experience secured with blockchain payments and exclusive rewards.</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <form action="signup-form" class="login-card">
+        <div class="brand-logo">
+          <div class="logo">
+            <span class="material-icons">shopping_cart</span>
+          </div>
+          <span class="brand-name">Chainstore</span>
+        </div>
+
+        <h1>Sign Up</h1>
+        <p>Create your account to get started</p>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-field">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="johndoe123" required />
+            </div>
+
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example234@gmail.com" required />
+            </div>
+
+            <div class="input-field">
+              <label for="password">Password</label>
+              <div class="password-field">
+                <input type="password" id="password" name="password" placeholder="••••••••••" required />
+                <button type="button" class="password-toggle" onclick="togglePassword('password')">👁</button>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <label for="confirm-password">Confirm Password</label>
+              <div class="password-field">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••••" required />
+                <button type="button" class="password-toggle" onclick="togglePassword('confirm-password')">👁</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn">Create Account</button>
+
+        <div class="divider">or</div>
+
+        <button type="button" class="google-btn">
+          <img src="https://developers.google.com/identity/images/g-logo.png"
+           alt="Google logo" class="google-icon" width="20" height="20" />
+          Sign up with Google
+        </button>
+
+        <div class="signup-link">
+          <p>Already have an account? <a href="login.html" class="create-account">Log In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      const button = input.nextElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+        button.textContent = "🙈";
+      } else {
+        input.type = "password";
+        button.textContent = "👁";
+      }
+    }
+  </script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

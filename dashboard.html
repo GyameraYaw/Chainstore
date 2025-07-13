@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Chainstore</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <aside class="sidebar">
+      <h2 class="logo">Chainstore</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="billing.html">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+   
+    <main class="main-content">
+     
+      <header class="navbar">
+        <div class="nav-left">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="nav-right">
+          <input type="text" placeholder="Search..." />
+          <span class="profile-icon">👤</span>
+          <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <p id="welcome-message">Welcome to your Chainstore Dashboard!</p>
+      
+      </section>
+    </main>
+  </div>
+  
+  <script src="js/auth.js"></script>
+</body>
+</html>
